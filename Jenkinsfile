@@ -2,6 +2,8 @@ pipeline {
     agent { label "Jenkins-Agent" }
     environment {
               APP_NAME = "register-app-pipeline"
+              GIT_USERNAME = "tiwari/Rhul"
+              GIT_PASSWORD = "Keemonache321#"
     }
 
     stages {
@@ -35,8 +37,7 @@ pipeline {
                    git add deployment.yaml
                    git commit -m "Updated Deployment Manifest"
                 """
-                withCredentials([usernamePassword(credentialsId: 'github', usernameVariable: 'tiwari/Rhul', passwordVariable: 'Keemonache321#')]) {
-                  sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/tiwari-Rhul/gitops-register-app main"
+                sh "git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/tiwari-Rhul/gitops-register-app main"
                 }
             }
         }
