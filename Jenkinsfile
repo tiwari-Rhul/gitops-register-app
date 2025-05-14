@@ -3,7 +3,7 @@ pipeline {
     environment {
               APP_NAME = "register-app-pipeline"
               GIT_USERNAME = "tiwari-Rhul"
-              GIT_PASSWORD = "Keemonache321#"
+              GIT_PASSWORD = "Keemonache321%23"
     }
 
     stages {
