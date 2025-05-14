@@ -2,7 +2,7 @@ pipeline {
     agent { label "Jenkins-Agent" }
     environment {
               APP_NAME = "register-app-pipeline"
-              GIT_USERNAME = "tiwari/Rhul"
+              GIT_USERNAME = "tiwari-Rhul"
               GIT_PASSWORD = "Keemonache321#"
     }
 
